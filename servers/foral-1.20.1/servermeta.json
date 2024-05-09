@@ -1,0 +1,21 @@
+{
+  "$schema": "file:///C:/test/schemas/ServerMetaSchema.schema.json",
+  "meta": {
+    "version": "1.0.0",
+    "name": "foral (Minecraft 1.20.1)",
+    "description": "foral Running Minecraft 1.20.1 (Forge v47.2.0)",
+    "icon": "https://cdn.discordapp.com/attachments/1143475704911114331/1233709062286479370/image_1.png?ex=6636a659&is=663554d9&hm=893caddf19eb72da61d2bd15290ac9e3357b6ee72cb3c2eebcd59678af15c379&",
+    "address": "myakho.mcv.kr:24454",
+    "discord": {
+      "shortId": "main-1.20.1",
+      "largeImageText": "main-1.20.1",
+      "largeImageKey": "main-1.20.1"
+    },
+    "mainServer": true,
+    "autoconnect": true
+  },
+  "forge": {
+    "version": "47.2.0"
+  },
+  "untrackedFiles": []
+}
