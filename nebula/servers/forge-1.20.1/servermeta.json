@@ -1,0 +1,21 @@
+{
+  "$schema": "file:///C:/test/schemas/ServerMetaSchema.schema.json",
+  "meta": {
+    "version": "1.0.0",
+    "name": "forge (Minecraft 1.20.1)",
+    "description": "forge Running Minecraft 1.20.1 (Forge v47.2.0)",
+    "icon": "https://media.forgecdn.net/avatars/529/635/637851526863642098.png",
+    "address": "myakho.mcv.kr:24454",
+    "discord": {
+      "shortId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+      "largeImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+      "largeImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+    },
+    "mainServer": true,
+    "autoconnect": true
+  },
+  "forge": {
+    "version": "47.2.0"
+  },
+  "untrackedFiles": []
+}
