@@ -1,0 +1,11 @@
+{
+  "$schema": "file:///C:/test/schemas/DistroMetaSchema.schema.json",
+  "meta": {
+    "rss": "",
+    "discord": {
+      "clientId": "",
+      "smallImageText": "",
+      "smallImageKey": ""
+    }
+  }
+}
