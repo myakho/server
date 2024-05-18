@@ -1,0 +1,21 @@
+{
+  "$schema": "file:///C:/test/schemas/ServerMetaSchema.schema.json",
+  "meta": {
+    "version": "1.0.0",
+    "name": "server (myakho)",
+    "description": "fabric Running Minecraft",
+    "icon": "https://media.forgecdn.net/avatars/185/822/636829723898798601.png",
+    "address": "myakho.mcv.kr:24454",
+    "discord": {
+      "shortId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+      "largeImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+      "largeImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+    },
+    "mainServer": true,
+    "autoconnect": true
+  },
+  "fabric": {
+    "version": "0.15.11"
+  },
+  "untrackedFiles": []
+}
