@@ -21,15 +21,32 @@
             border: 1px solid #fff;
             background: #000;
         }
+        #next-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 20px;
+        }
         #next {
             border: 1px solid #fff;
             background: #000;
-            margin-left: 20px;
         }
         #score {
             text-align: center;
             margin-top: 20px;
             font-size: 24px;
+        }
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -37,8 +54,14 @@
     <div id="game-container">
         <canvas id="tetris"></canvas>
         <div id="next-container">
-            <canvas id="next" width="120" height="120"></canvas>
+            <canvas id="next" width="60" height="60"></canvas>
             <div id="score">0</div>
+            <div id="controls">
+                <button id="left">Left</button>
+                <button id="right">Right</button>
+                <button id="down">Down</button>
+                <button id="rotate">Rotate</button>
+            </div>
         </div>
     </div>
     <script src="tetris.js"></script>
