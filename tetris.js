@@ -260,5 +260,3 @@ update();
 setInterval(() => {
     dropInterval -= 50;
 }, 20000);
-
-        
