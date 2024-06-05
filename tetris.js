@@ -219,6 +219,10 @@ function update(time = 0) {
 
     draw();
     requestAnimationFrame(update);
+    if (player.score % 100 === 0 && player.score !== 0) {
+        dropInterval *= 0.9; // 조정 가능한 값
+    }
+
 }
 
 function updateScore() {
