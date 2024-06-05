@@ -228,7 +228,7 @@ function updateScore() {
 document.addEventListener('keydown', event => {
     if (event.keyCode === 37) {
         playerMove(-1); //
-    } else if (event.keyCode === 39) {
+        } else if (event.keyCode === 39) {
         playerMove(1); // 오른쪽 화살표 키
     } else if (event.keyCode === 40) {
         playerDrop(); // 아래쪽 화살표 키
@@ -260,3 +260,4 @@ update();
 setInterval(() => {
     dropInterval -= 50;
 }, 20000);
+
