@@ -2,11 +2,10 @@ const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 
 const ROW = 20;
-const COL = COLUMN = 10;
-const SQ = squareSize = 30;
+const COL = 10;
+const SQ = 30;
 const VACANT = "WHITE"; // empty square
 
-// draw a square
 function drawSquare(x, y, color) {
     context.fillStyle = color;
     context.fillRect(x * SQ, y * SQ, SQ, SQ);
@@ -15,7 +14,6 @@ function drawSquare(x, y, color) {
     context.strokeRect(x * SQ, y * SQ, SQ, SQ);
 }
 
-// create the board
 let board = [];
 for (let r = 0; r < ROW; r++) {
     board[r] = [];
@@ -24,7 +22,6 @@ for (let r = 0; r < ROW; r++) {
     }
 }
 
-// draw the board
 function drawBoard() {
     for (let r = 0; r < ROW; r++) {
         for (let c = 0; c < COL; c++) {
@@ -35,7 +32,6 @@ function drawBoard() {
 
 drawBoard();
 
-// the pieces and their colors
 const PIECES = [
     [Z, "red"],
     [S, "green"],
@@ -46,28 +42,24 @@ const PIECES = [
     [J, "orange"]
 ];
 
-// generate random pieces
 function randomPiece() {
-    let r = Math.floor(Math.random() * PIECES.length); // 0 -> 6
+    let r = Math.floor(Math.random() * PIECES.length);
     return new Piece(PIECES[r][0], PIECES[r][1]);
 }
 
 let p = randomPiece();
 
-// The Object Piece
 function Piece(tetromino, color) {
     this.tetromino = tetromino;
     this.color = color;
 
-    this.tetrominoN = 0; // we start from the first pattern
+    this.tetrominoN = 0;
     this.activeTetromino = this.tetromino[this.tetrominoN];
 
-    // we need to control the pieces
     this.x = 3;
     this.y = -2;
 }
 
-// fill function
 Piece.prototype.fill = function (color) {
     for (let r = 0; r < this.activeTetromino.length; r++) {
         for (let c = 0; c < this.activeTetromino.length; c++) {
@@ -78,17 +70,14 @@ Piece.prototype.fill = function (color) {
     }
 }
 
-// draw a piece to the board
 Piece.prototype.draw = function () {
     this.fill(this.color);
 }
 
-// undraw a piece
 Piece.prototype.unDraw = function () {
     this.fill(VACANT);
 }
 
-// move Down the piece
 Piece.prototype.moveDown = function () {
     if (!this.collision(0, 1, this.activeTetromino)) {
         this.unDraw();
@@ -100,7 +89,6 @@ Piece.prototype.moveDown = function () {
     }
 }
 
-// move Right the piece
 Piece.prototype.moveRight = function () {
     if (!this.collision(1, 0, this.activeTetromino)) {
         this.unDraw();
@@ -109,7 +97,6 @@ Piece.prototype.moveRight = function () {
     }
 }
 
-// move Left the piece
 Piece.prototype.moveLeft = function () {
     if (!this.collision(-1, 0, this.activeTetromino)) {
         this.unDraw();
@@ -118,16 +105,15 @@ Piece.prototype.moveLeft = function () {
     }
 }
 
-// rotate the piece
 Piece.prototype.rotate = function () {
     let nextPattern = this.tetromino[(this.tetrominoN + 1) % this.tetromino.length];
     let kick = 0;
 
     if (this.collision(0, 0, nextPattern)) {
         if (this.x > COL / 2) {
-            kick = -1; // move the piece to the left
+            kick = -1;
         } else {
-            kick = 1; // move the piece to the right
+            kick = 1;
         }
     }
 
@@ -156,7 +142,6 @@ function drop() {
 
 drop();
 
-// collision function
 Piece.prototype.collision = function (x, y, piece) {
     for (let r = 0; r < piece.length; r++) {
         for (let c = 0; c < piece.length; c++) {
@@ -205,7 +190,6 @@ Piece.prototype.lock = function () {
             }
             if (this.y + r < 0) {
                 alert("Game Over");
-                // stop request animation frame
                 gameOver = true;
                 break;
             }
@@ -231,7 +215,6 @@ Piece.prototype.lock = function () {
     drawBoard();
 }
 
-// Tetrominoes
 const I = [
     [
         [0, 0, 0, 0],
@@ -383,7 +366,6 @@ const Z = [
     ]
 ];
 
-// Mobile controls
 document.getElementById('left').addEventListener('click', () => {
     p.moveLeft();
     dropStart = Date.now();
