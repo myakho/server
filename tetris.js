@@ -1,7 +1,7 @@
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 
-const scale = 30; // 적절한 스케일 조정
+const scale = 30;
 const rows = 20;
 const cols = 10;
 
@@ -121,7 +121,6 @@ function playerDrop() {
         arenaSweep();
         updateScore();
     }
-    dropCounter = 0;
 }
 
 function playerMove(dir) {
@@ -214,6 +213,7 @@ function update(time = 0) {
     dropCounter += deltaTime;
     if (dropCounter > dropInterval) {
         playerDrop();
+        dropCounter = 0;
     }
 
     draw();
@@ -226,12 +226,21 @@ function updateScore() {
 
 document.addEventListener('keydown', event => {
     if (event.keyCode === 37) {
-        playerMove
-        (-1); // 왼쪽 화살표 키
-    } else if (event.keyCode === 39) {
+        playerMove(-1); // 왼쪽 화살표 키
+    } else if (
+        event.keyCode === 39) {
         playerMove(1); // 오른쪽 화살표 키
     } else if (event.keyCode === 40) {
         playerDrop(); // 아래쪽 화살표 키
+    } else if (event.keyCode === 32) {
+        while (!collide(arena, player)) {
+            player.pos.y++;
+        }
+        player.pos.y--;
+        merge(arena, player);
+        playerReset();
+        arenaSweep();
+        updateScore();
     } else if (event.keyCode === 81) {
         playerRotate(-1); // 'Q' 키
     } else if (event.keyCode === 87) {
@@ -247,3 +256,4 @@ document.getElementById('rotate').addEventListener('click', () => playerRotate(1
 playerReset();
 updateScore();
 update();
+
