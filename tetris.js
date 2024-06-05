@@ -130,7 +130,7 @@ function playerDrop() {
         playerReset();
         arenaSweep();
         updateScore();
-        dropInterval = 1000 - (player.score * 5);
+        dropInterval = Math.max(100, 1000 - (player.score * 5)); // 점수에 따라 속도 증가, 최소 속도 제한
     }
     dropCounter = 0;
 }
