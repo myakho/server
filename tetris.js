@@ -11,7 +11,7 @@ canvas.width = cols * scale;
 canvas.height = rows * scale;
 
 context.scale(scale, scale);
-nextContext.scale(10000, 10000); // 다음 블럭을 더 크게 표시
+nextContext.scale(10, 10); // 다음 블럭을 더 크게 표시
 
 const arena = createMatrix(cols, rows);
 
