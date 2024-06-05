@@ -12,28 +12,35 @@
             height: 100vh;
             background: #000;
             margin: 0;
+            color: #fff;
         }
-        #tetris, #next {
+        #game-container {
+            display: flex;
+        }
+        #tetris {
             border: 1px solid #fff;
             background: #000;
         }
-        #score {
-            color: #fff;
-            font-size: 20px;
+        #next {
+            border: 1px solid #fff;
+            background: #000;
+            margin-left: 20px;
         }
-        #info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        #score {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <div id="info">
-        <canvas id="next" width="120" height="120"></canvas>
-        <div id="score">0</div>
+    <div id="game-container">
+        <canvas id="tetris"></canvas>
+        <div id="next-container">
+            <canvas id="next" width="120" height="120"></canvas>
+            <div id="score">0</div>
+        </div>
     </div>
-    <canvas id="tetris" width="300" height="600"></canvas>
     <script src="tetris.js"></script>
 </body>
 </html>
