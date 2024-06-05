@@ -8,8 +8,6 @@ const cols = 10;
 canvas.width = cols * scale;
 canvas.height = rows * scale;
 
-context.scale(scale, scale);
-
 const arena = createMatrix(cols, rows);
 
 const player = {
