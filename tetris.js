@@ -11,7 +11,7 @@ canvas.width = cols * scale;
 canvas.height = rows * scale;
 
 context.scale(scale, scale);
-nextContext.scale(3, 3);  // 다음 블록을 크게 표시
+nextContext.scale(4, 4); // 다음 블럭을 더 크게 표시
 
 const arena = createMatrix(cols, rows);
 
@@ -212,7 +212,7 @@ function collide(arena, player) {
             if (m[y][x] !== 0 &&
                (arena[y + o.y] &&
                 arena[y + o.y][x + o.x]) !== 0) {
-                return true;
+                    return true;
             }
         }
     }
