@@ -1,7 +1,7 @@
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 
-const scale = 20;
+const scale = 30; // 적절한 스케일 조정
 const rows = 20;
 const cols = 10;
 
@@ -226,15 +226,16 @@ function updateScore() {
 
 document.addEventListener('keydown', event => {
     if (event.keyCode === 37) {
-        playerMove(-1);
+        playerMove
+        (-1); // 왼쪽 화살표 키
     } else if (event.keyCode === 39) {
-        playerMove(1);
+        playerMove(1); // 오른쪽 화살표 키
     } else if (event.keyCode === 40) {
-        playerDrop();
+        playerDrop(); // 아래쪽 화살표 키
     } else if (event.keyCode === 81) {
-        playerRotate(-1);
+        playerRotate(-1); // 'Q' 키
     } else if (event.keyCode === 87) {
-        playerRotate(1);
+        playerRotate(1); // 'W' 키
     }
 });
 
