@@ -1,8 +1,16 @@
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
-context.scale(20, 20);
 
-const arena = createMatrix(12, 20);
+const scale = 20;
+const rows = 20;
+const cols = 12;
+
+canvas.width = cols * scale;
+canvas.height = rows * scale;
+
+context.scale(scale, scale);
+
+const arena = createMatrix(cols, rows);
 
 const player = {
     pos: { x: 0, y: 0 },
