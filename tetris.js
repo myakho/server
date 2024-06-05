@@ -8,6 +8,8 @@ const cols = 10;
 canvas.width = cols * scale;
 canvas.height = rows * scale;
 
+context.scale(scale, scale);
+
 const arena = createMatrix(cols, rows);
 
 const player = {
@@ -164,7 +166,8 @@ function rotate(matrix, dir) {
     }
     if (dir > 0) {
         matrix.forEach(row => row.reverse());
-    } else {
+    } else
+    {
         matrix.reverse();
     }
 }
