@@ -3,7 +3,7 @@ const context = canvas.getContext('2d');
 
 const scale = 20;
 const rows = 20;
-const cols = 12;
+const cols = 10;
 
 canvas.width = cols * scale;
 canvas.height = rows * scale;
