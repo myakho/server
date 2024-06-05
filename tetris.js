@@ -207,20 +207,6 @@ let dropCounter = 0;
 let dropInterval = 1000;
 let lastTime = 0;
 
-function update(time = 0) {
-    const deltaTime = time - lastTime;
-    lastTime = time;
-
-    dropCounter += deltaTime;
-
-    if (dropCounter > dropInterval) {
-        playerDrop();
-    }
-
-    draw();
-    requestAnimationFrame(update);
-    }
-
 }
 
 function updateScore() {
