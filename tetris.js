@@ -11,12 +11,12 @@ canvas.width = cols * scale;
 canvas.height = rows * scale;
 
 context.scale(scale, scale);
-nextContext.scale(1000000000000, 10000000000000); // 다음 블럭을 더 크게 표시
+nextContext.scale(10000000, 100000000); // 다음 블럭을 더 크게 표시
 
 const arena = createMatrix(cols, rows);
 
 const player = {
-    pos: { x: 10, y: 0 },
+    pos: { x: 0, y: 0 },
     matrix: null,
     next: null,
     score: 0,
