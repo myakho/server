@@ -1,7 +1,9 @@
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
+const nextCanvas = document.getElementById('next');
+const nextContext = nextCanvas.getContext('2d');
 
-const scale = 30; // 적절한 스케일 조정
+const scale = 30;
 const rows = 20;
 const cols = 10;
 
@@ -9,12 +11,14 @@ canvas.width = cols * scale;
 canvas.height = rows * scale;
 
 context.scale(scale, scale);
+nextContext.scale(2, 2);
 
 const arena = createMatrix(cols, rows);
 
 const player = {
     pos: { x: 0, y: 0 },
     matrix: null,
+    next: null,
     score: 0,
 };
 
@@ -83,12 +87,12 @@ function createPiece(type) {
     }
 }
 
-function drawMatrix(matrix, offset) {
+function drawMatrix(matrix, offset, ctx = context) {
     matrix.forEach((row, y) => {
         row.forEach((value, x) => {
             if (value !== 0) {
-                context.fillStyle = colors[value];
-                context.fillRect(x + offset.x, y + offset.y, 1, 1);
+                ctx.fillStyle = colors[value];
+                ctx.fillRect(x + offset.x, y + offset.y, 1, 1);
             }
         });
     });
@@ -100,6 +104,12 @@ function draw() {
 
     drawMatrix(arena, { x: 0, y: 0 });
     drawMatrix(player.matrix, player.pos);
+}
+
+function drawNext() {
+    nextContext.fillStyle = '#000';
+    nextContext.fillRect(0, 0, nextCanvas.width, nextCanvas.height);
+    drawMatrix(player.next, { x: 1, y: 1 }, nextContext);
 }
 
 function merge(arena, player) {
@@ -120,6 +130,7 @@ function playerDrop() {
         playerReset();
         arenaSweep();
         updateScore();
+        dropInterval = 1000 - (player.score * 5);
     }
     dropCounter = 0;
 }
@@ -132,15 +143,20 @@ function playerMove(dir) {
 }
 
 function playerReset() {
-    const pieces = 'TJLOSZI';
-    player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
+    if (player.next === null) {
+        player.next = createPiece('TJLOSZI'[Math.random() * 7 | 0]);
+    }
+    player.matrix = player.next;
+    player.next = createPiece('TJLOSZI'[Math.random() * 7 | 0]);
     player.pos.y = 0;
     player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
     if (collide(arena, player)) {
         arena.forEach(row => row.fill(0));
         player.score = 0;
         updateScore();
+        dropInterval = 1000;
     }
+    drawNext();
 }
 
 function playerRotate(dir) {
@@ -227,7 +243,7 @@ function updateScore() {
 
 document.addEventListener('keydown', event => {
     if (event.keyCode === 37) {
-        playerMove(-1); //
+        playerMove(-1); // 왼쪽 화살표 키
     } else if (event.keyCode === 39) {
         playerMove(1); // 오른쪽 화살표 키
     } else if (event.keyCode === 40) {
@@ -256,7 +272,3 @@ document.getElementById('rotate').addEventListener('click', () => playerRotate(1
 playerReset();
 updateScore();
 update();
-
-setInterval(() => {
-    dropInterval -= 50;
-}, 20000);
