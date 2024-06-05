@@ -1,7 +1,7 @@
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 
-const scale = 30;
+const scale = 30; // 적절한 스케일 조정
 const rows = 20;
 const cols = 10;
 
@@ -121,6 +121,7 @@ function playerDrop() {
         arenaSweep();
         updateScore();
     }
+    dropCounter = 0;
 }
 
 function playerMove(dir) {
@@ -204,16 +205,16 @@ function collide(arena, player) {
 
 let dropCounter = 0;
 let dropInterval = 1000;
-
 let lastTime = 0;
+
 function update(time = 0) {
     const deltaTime = time - lastTime;
     lastTime = time;
 
     dropCounter += deltaTime;
+
     if (dropCounter > dropInterval) {
         playerDrop();
-        dropCounter = 0;
     }
 
     draw();
@@ -226,12 +227,15 @@ function updateScore() {
 
 document.addEventListener('keydown', event => {
     if (event.keyCode === 37) {
-        playerMove(-1); // 왼쪽 화살표 키
-    } else if (
-        event.keyCode === 39) {
+        playerMove(-1); //
+    } else if (event.keyCode === 39) {
         playerMove(1); // 오른쪽 화살표 키
     } else if (event.keyCode === 40) {
         playerDrop(); // 아래쪽 화살표 키
+    } else if (event.keyCode === 81) {
+        playerRotate(-1); // 'Q' 키
+    } else if (event.keyCode === 87) {
+        playerRotate(1); // 'W' 키
     } else if (event.keyCode === 32) {
         while (!collide(arena, player)) {
             player.pos.y++;
@@ -241,10 +245,6 @@ document.addEventListener('keydown', event => {
         playerReset();
         arenaSweep();
         updateScore();
-    } else if (event.keyCode === 81) {
-        playerRotate(-1); // 'Q' 키
-    } else if (event.keyCode === 87) {
-        playerRotate(1); // 'W' 키
     }
 });
 
@@ -257,3 +257,6 @@ playerReset();
 updateScore();
 update();
 
+setInterval(() => {
+    dropInterval -= 50;
+}, 20000);
