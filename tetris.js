@@ -16,7 +16,7 @@ nextContext.scale(1000000000000, 10000000000000); // 다음 블럭을 더 크게
 const arena = createMatrix(cols, rows);
 
 const player = {
-    pos: { x: 50, y: -50 },
+    pos: { x: 10, y: 0 },
     matrix: null,
     next: null,
     score: 0,
