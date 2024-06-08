@@ -51,13 +51,3 @@ button {
 button:active {
     background: #555;
 }
-
-#tetris {
-    border: 1px solid #fff;
-    background: #000;
-}
-
-.cell {
-    stroke: #333;
-    stroke-width: 0.05;
-}
