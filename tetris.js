@@ -101,10 +101,21 @@ function drawMatrix(matrix, offset, ctx = context) {
     });
 }
 
+function drawBoard() {
+    context.strokeStyle = '#FFF';
+    context.lineWidth = 0.05;
+    for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+            context.strokeRect(x, y, 1, 1);
+        }
+    }
+}
+
 function draw() {
     context.fillStyle = '#000';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
+    drawBoard();
     drawMatrix(arena, { x: 0, y: 0 });
     drawMatrix(player.matrix, player.pos);
 }
