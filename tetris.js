@@ -93,16 +93,13 @@ function drawMatrix(matrix, offset, ctx = context) {
             if (value !== 0) {
                 ctx.fillStyle = colors[value];
                 ctx.fillRect(x + offset.x, y + offset.y, 1, 1);
-                ctx.strokeStyle = '#333';
-                ctx.lineWidth = 0.05;
-                ctx.strokeRect(x + offset.x, y + offset.y, 1, 1);
             }
         });
     });
 }
 
 function drawBoard() {
-    context.strokeStyle = '#FFF';
+    context.strokeStyle = '#555';
     context.lineWidth = 0.05;
     for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
