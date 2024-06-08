@@ -11,7 +11,7 @@ canvas.width = cols * scale;
 canvas.height = rows * scale;
 
 context.scale(scale, scale);
-nextContext.scale(10, 10); // 다음 블럭을 더 크게 표시
+nextContext.scale(4, 4);
 
 const arena = createMatrix(cols, rows);
 
@@ -93,6 +93,9 @@ function drawMatrix(matrix, offset, ctx = context) {
             if (value !== 0) {
                 ctx.fillStyle = colors[value];
                 ctx.fillRect(x + offset.x, y + offset.y, 1, 1);
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 0.05;
+                ctx.strokeRect(x + offset.x, y + offset.y, 1, 1);
             }
         });
     });
@@ -212,7 +215,7 @@ function collide(arena, player) {
             if (m[y][x] !== 0 &&
                (arena[y + o.y] &&
                 arena[y + o.y][x + o.x]) !== 0) {
-                    return true;
+                return true;
             }
         }
     }
