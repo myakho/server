@@ -12,11 +12,11 @@ canvas.height = rows * scale;
 
 context.scale(scale, scale);
 
-const nextScale = 20; // 다음 블록 크기 조정
+const nextScale = 6; // 다음 블록 크기 조정
 nextCanvas.width = 4 * nextScale;
 nextCanvas.height = 4 * nextScale;
 
-nextContext.scale(nextScale / 4, nextScale / 4); // 다음 블록의 스케일 조정
+nextContext.scale(nextScale, nextScale);
 
 const arena = createMatrix(cols, rows);
 
