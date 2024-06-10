@@ -11,7 +11,12 @@ canvas.width = cols * scale;
 canvas.height = rows * scale;
 
 context.scale(scale, scale);
-nextContext.scale(2, 2); // 다음 블록 크기 키우기
+
+const nextScale = 6; // 다음 블록 크기 조정
+nextCanvas.width = 4 * nextScale;
+nextCanvas.height = 4 * nextScale;
+
+nextContext.scale(nextScale, nextScale);
 
 const arena = createMatrix(cols, rows);
 
@@ -120,7 +125,7 @@ function draw() {
 function drawNext() {
     nextContext.fillStyle = '#000';
     nextContext.fillRect(0, 0, nextCanvas.width, nextCanvas.height);
-    drawMatrix(player.next, { x: 1, y: 1 }, nextContext);
+    drawMatrix(player.next, { x: 1, y: 1 }, nextContext); // 위치 조정
 }
 
 function merge(arena, player) {
