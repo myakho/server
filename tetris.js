@@ -1,40 +1,9 @@
-// Your existing Tetris game code...
-
-let player;
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtube-player', {
-        height: '0',
-        width: '0',
-        videoId: 'yAEEdFyr7OQ',
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
-    });
-}
-
-function onPlayerReady(event) {
-    event.target.playVideo();
-    player.setVolume(50); // Initial volume set to 50%
-}
-
-function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.ENDED) {
-        player.seekTo(0);
-        player.playVideo();
-    }
-}
-
-document.getElementById('volume').addEventListener('input', (event) => {
-    const volume = event.target.value;
-    player.setVolume(volume);
-});
-
-// Your existing Tetris game code...
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 const nextCanvas = document.getElementById('next');
 const nextContext = nextCanvas.getContext('2d');
+const music = document.getElementById('background-music');
+const volumeControl = document.getElementById('volume-control');
 
 const scale = 30;
 const rows = 20;
@@ -317,6 +286,14 @@ document.getElementById('left').addEventListener('click', () => playerMove(-1));
 document.getElementById('right').addEventListener('click', () => playerMove(1));
 document.getElementById('down').addEventListener('click', () => playerDrop());
 document.getElementById('rotate').addEventListener('click', () => playerRotate(1));
+
+// 음악 재생 및 볼륨 조절
+music.volume = 0.5;
+music.play();
+
+volumeControl.addEventListener('input', (event) => {
+    music.volume = event.target.value;
+});
 
 playerReset();
 updateScore();
