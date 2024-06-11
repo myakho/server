@@ -1,3 +1,36 @@
+// Your existing Tetris game code...
+
+let player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtube-player', {
+        height: '0',
+        width: '0',
+        videoId: 'yAEEdFyr7OQ',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    event.target.playVideo();
+    player.setVolume(50); // Initial volume set to 50%
+}
+
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+        player.seekTo(0);
+        player.playVideo();
+    }
+}
+
+document.getElementById('volume').addEventListener('input', (event) => {
+    const volume = event.target.value;
+    player.setVolume(volume);
+});
+
+// Your existing Tetris game code...
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 const nextCanvas = document.getElementById('next');
