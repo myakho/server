@@ -2,8 +2,6 @@ const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 const nextCanvas = document.getElementById('next');
 const nextContext = nextCanvas.getContext('2d');
-const music = document.getElementById('background-music');
-const volumeControl = document.getElementById('volume-control');
 
 const scale = 30;
 const rows = 20;
@@ -286,14 +284,6 @@ document.getElementById('left').addEventListener('click', () => playerMove(-1));
 document.getElementById('right').addEventListener('click', () => playerMove(1));
 document.getElementById('down').addEventListener('click', () => playerDrop());
 document.getElementById('rotate').addEventListener('click', () => playerRotate(1));
-
-// 음악 재생 및 볼륨 조절
-music.volume = 0.5;
-music.play();
-
-volumeControl.addEventListener('input', (event) => {
-    music.volume = event.target.value;
-});
 
 playerReset();
 updateScore();
