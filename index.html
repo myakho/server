@@ -3,59 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris</title>
+    <title>Tetris Game</title>
     <style>
-        /* Your existing CSS */
-        #tetris-container {
-            display: flex;
-        }
+        /* 기존 CSS 유지 */
 
-        #game {
-            flex: 2;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        #tetris {
+            border: 2px solid white;
         }
 
         #controls {
-            flex: 1;
+            margin-top: 20px;
+        }
+
+        #next-container {
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: top;
+        }
+
+        #next {
+            border: 2px solid white;
+        }
+
+        #audio-controls {
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        canvas {
-            border: 1px solid #555;
-        }
-
-        #next {
-            margin-top: 20px;
-        }
-
-        #youtube-player {
-            margin-top: 20px;
+        #volume-control {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div id="tetris-container">
-        <div id="game">
-            <canvas id="tetris" width="300" height="600"></canvas>
-            <div id="scoreboard">
-                <p>Score: <span id="score">0</span></p>
-            </div>
-            <div>
-                <button id="left">Left</button>
-                <button id="rotate">Rotate</button>
-                <button id="right">Right</button>
-                <button id="down">Down</button>
-            </div>
+    <div>
+        <canvas id="tetris"></canvas>
+        <div id="next-container">
+            <canvas id="next"></canvas>
+            <div id="score">0</div>
         </div>
         <div id="controls">
-            <canvas id="next" width="120" height="120"></canvas>
-            <div id="youtube-player"></div>
-            <label for="volume">Volume:</label>
-            <input type="range" id="volume" min="0" max="100" value="50">
+            <button id="left">Left</button>
+            <button id="rotate">Rotate</button>
+            <button id="right">Right</button>
+            <button id="down">Down</button>
+        </div>
+        <div id="audio-controls">
+            <audio id="background-music" loop>
+                <source src="https://www.youtube.com/watch?v=yAEEdFyr7OQ" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <label for="volume-control">Volume:</label>
+            <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.5">
         </div>
     </div>
-    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="tetris.js"></script>
 </body>
 </html>
