@@ -5,67 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetris</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #000;
-            margin: 0;
-            color: #fff;
-        }
-        #game-container {
+        /* Your existing CSS */
+        #tetris-container {
             display: flex;
         }
-        #tetris {
-            border: 1px solid #fff;
-            background: #000;
+
+        #game {
+            flex: 2;
         }
-        #next-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 20px;
-        }
-        #next {
-            border: 1px solid #fff;
-            background: #000;
-            width: 120px;
-            height: 120px;
-        }
-        #score {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 24px;
-        }
+
         #controls {
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        canvas {
+            border: 1px solid #555;
+        }
+
+        #next {
             margin-top: 20px;
         }
-        button {
-            margin: 5px;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
+
+        #youtube-player {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="game-container">
-        <canvas id="tetris"></canvas>
-        <div id="next-container">
-            <canvas id="next" width="120" height="120"></canvas>
-            <div id="score">0</div>
-            <div id="controls">
+    <div id="tetris-container">
+        <div id="game">
+            <canvas id="tetris" width="300" height="600"></canvas>
+            <div id="scoreboard">
+                <p>Score: <span id="score">0</span></p>
+            </div>
+            <div>
                 <button id="left">Left</button>
+                <button id="rotate">Rotate</button>
                 <button id="right">Right</button>
                 <button id="down">Down</button>
-                <button id="rotate">Rotate</button>
             </div>
         </div>
+        <div id="controls">
+            <canvas id="next" width="120" height="120"></canvas>
+            <div id="youtube-player"></div>
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
     </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="tetris.js"></script>
 </body>
 </html>
