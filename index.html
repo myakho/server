@@ -5,65 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetris</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #000;
-            margin: 0;
-            color: #fff;
-        }
-        #game-container {
-            display: flex;
-        }
-        #tetris {
-            border: 1px solid #fff;
-            background: #000;
-        }
-        #next-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 20px;
+        /* 기존 CSS 스타일 */
+        canvas {
+            border: 1px solid black;
         }
         #next {
-            border: 1px solid #fff;
-            background: #000;
-            width: 120px;
-            height: 120px;
-        }
-        #score {
-            text-align: center;
             margin-top: 20px;
-            font-size: 24px;
         }
-        #controls {
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .side-panel {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 20px;
         }
-        button {
-            margin: 5px;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
+        #github-btn {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="game-container">
-        <canvas id="tetris"></canvas>
-        <div id="next-container">
-            <canvas id="next" width="120" height="120"></canvas>
-            <div id="score">0</div>
-            <div id="controls">
+    <div class="container">
+        <div class="side-panel">
+            <canvas id="tetris"></canvas>
+            <div>
                 <button id="left">Left</button>
+                <button id="rotate">Rotate</button>
                 <button id="right">Right</button>
                 <button id="down">Down</button>
-                <button id="rotate">Rotate</button>
             </div>
+        </div>
+        <div class="side-panel">
+            <div>Next Piece:</div>
+            <canvas id="next"></canvas>
+            <div>Score: <span id="score">0</span></div>
+            <button id="github-btn">Go to GitHub</button>
         </div>
     </div>
     <script src="tetris.js"></script>
