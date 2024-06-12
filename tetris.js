@@ -284,6 +284,9 @@ document.getElementById('left').addEventListener('click', () => playerMove(-1));
 document.getElementById('right').addEventListener('click', () => playerMove(1));
 document.getElementById('down').addEventListener('click', () => playerDrop());
 document.getElementById('rotate').addEventListener('click', () => playerRotate(1));
+document.getElementById('github-btn').addEventListener('click', () => {
+    window.location.href = 'https://github.com/myakho/server/tree/master';
+});
 
 playerReset();
 updateScore();
