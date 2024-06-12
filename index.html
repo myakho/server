@@ -1,48 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris</title>
+    <title>Tetris Game</title>
     <style>
-        /* 기존 CSS 스타일 */
-        canvas {
-            border: 1px solid black;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #000;
+            color: #fff;
+            font-family: sans-serif;
+        }
+        #tetris {
+            border: 1px solid #555;
+            margin-bottom: 10px;
         }
         #next {
-            margin-top: 20px;
+            border: 1px solid #555;
+            margin-bottom: 10px;
         }
-        .container {
+        .button-container {
             display: flex;
             justify-content: space-around;
+            margin-bottom: 10px;
         }
-        .side-panel {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        button {
+            padding: 10px;
+            font-size: 16px;
         }
-        #github-btn {
+        #score {
+            margin-bottom: 10px;
+        }
+        .link-container {
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="side-panel">
-            <canvas id="tetris"></canvas>
-            <div>
-                <button id="left">Left</button>
-                <button id="rotate">Rotate</button>
-                <button id="right">Right</button>
-                <button id="down">Down</button>
-            </div>
-        </div>
-        <div class="side-panel">
-            <div>Next Piece:</div>
-            <canvas id="next"></canvas>
-            <div>Score: <span id="score">0</span></div>
-            <button id="github-btn">Go to GitHub</button>
-        </div>
+    <canvas id="tetris"></canvas>
+    <canvas id="next"></canvas>
+    <div class="button-container">
+        <button id="left">Left</button>
+        <button id="rotate">Rotate</button>
+        <button id="right">Right</button>
+        <button id="down">Down</button>
+    </div>
+    <div id="score">0</div>
+    <div class="link-container">
+        <button onclick="window.location.href='https://github.com/myakho/server/tree/master'">Go to GitHub</button>
     </div>
     <script src="tetris.js"></script>
 </body>
