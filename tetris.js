@@ -98,7 +98,7 @@ function drawMatrix(matrix, offset, ctx = context) {
             if (value !== 0) {
                 ctx.fillStyle = colors[value];
                 ctx.fillRect(x + offset.x, y + offset.y, 1, 1);
-                ctx.strokeStyle = '#000'; // 블록 윤곽선 색상
+                ctx.strokeStyle = '#FFFFFF'; // 블록 윤곽선 색상
                 ctx.lineWidth = 0.05; // 윤곽선 두께
                 ctx.strokeRect(x + offset.x, y + offset.y, 1, 1); // 윤곽선 그리기
             }
