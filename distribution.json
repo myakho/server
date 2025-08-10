@@ -8,9 +8,9 @@
   },
   "servers": [
     {
-      "id": "test-1.21.8",
-      "name": "test (Minecraft 1.21.8)",
-      "description": "test Running Minecraft 1.21.8 (Fabric v0.17.2)",
+      "id": "1.21.8",
+      "name": "(Minecraft 1.21.8)",
+      "description": "Minecraft 1.21.8 (Fabric v0.17.2)",
       "icon": "https://scalacube.com/images/store/minecraft/fabric.png",
       "version": "1.0.0",
       "address": "yeoulbeking.mcv.kr:24454",
