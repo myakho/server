@@ -1,0 +1,21 @@
+{
+  "$schema": "file:///C:/test/schemas/ServerMetaSchema.schema.json",
+  "meta": {
+    "version": "1.0.0",
+    "name": "양세찬 게임",
+    "description": "Minecraft 1.21.8",
+    "icon": "https://i.namu.wiki/i/IvuytVaDnPokHH1zUopc1DNvPSX-m4A0tXzJ44vx_B-Uc8l1Y-QD1rZuSxMDfVFk_3RdwnASYoPzNQaIsxwFOg.webp",
+    "address": "yeoulbeking.mcv.kr:24454",
+    "discord": {
+      "shortId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+      "largeImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+      "largeImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+    },
+    "mainServer": true,
+    "autoconnect": true
+  },
+  "fabric": {
+    "version": "0.17.2"
+  },
+  "untrackedFiles": []
+}
