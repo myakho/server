@@ -9,9 +9,9 @@
   "servers": [
     {
       "id": "test-1.21.8",
-      "name": "양세찬 게임",
+      "name": "내 입이 방정이야",
       "description": "Minecraft 1.21.8",
-      "icon": "https://i.namu.wiki/i/IvuytVaDnPokHH1zUopc1DNvPSX-m4A0tXzJ44vx_B-Uc8l1Y-QD1rZuSxMDfVFk_3RdwnASYoPzNQaIsxwFOg.webp",
+      "icon": "https://www.shutterstock.com/image-vector/muted-microphone-icon-vector-illustration-260nw-1120716866.jpg",
       "version": "1.0.0",
       "address": "yeoulbeking.mcv.kr:11111",
       "minecraftVersion": "1.21.8",
