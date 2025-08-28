@@ -1,0 +1,394 @@
+{
+  "version": "1.0.0",
+  "rss": "<LINK TO RSS FEED>",
+  "discord": {
+    "clientId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+    "smallImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+    "smallImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+  },
+  "servers": [
+    {
+      "id": "asdf-1.16.5",
+      "name": "asdf (Minecraft 1.16.5)",
+      "description": "asdf Running Minecraft 1.16.5 (Forge v36.2.42)",
+      "icon": "data:image/jpeg;base64,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",
+      "version": "1.0.0",
+      "address": "yeoulbeking.mcv.kr:11111",
+      "minecraftVersion": "1.16.5",
+      "discord": {
+        "shortId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+        "largeImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+        "largeImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+      },
+      "mainServer": true,
+      "autoconnect": true,
+      "modules": [
+        {
+          "id": "net.minecraftforge:forge:1.16.5-36.2.42",
+          "name": "Minecraft Forge (base jar)",
+          "type": "ForgeHosted",
+          "classpath": true,
+          "artifact": {
+            "size": 212563,
+            "MD5": "8ff0086ade0cf0f1d513e72edd04348c",
+            "url": "https://myakho.github.io/server/repo/lib/net/minecraftforge/forge/1.16.5-36.2.42/forge-1.16.5-36.2.42.jar"
+          },
+          "subModules": [
+            {
+              "id": "1.16.5-36.2.42",
+              "name": "Minecraft Forge (version.json)",
+              "type": "VersionManifest",
+              "artifact": {
+                "size": 13577,
+                "MD5": "f38b527e26e0a0165e2118970d1a4d13",
+                "url": "https://myakho.github.io/server/repo/versions/1.16.5-forge-36.2.42/1.16.5-forge-36.2.42.json"
+              }
+            },
+            {
+              "id": "net.minecraftforge:forge:1.16.5-36.2.42:universal",
+              "name": "Minecraft Forge (universal jar)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 2540080,
+                "MD5": "d5b89861a4e02bab15a111d529d99d86",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraftforge/forge/1.16.5-36.2.42/forge-1.16.5-36.2.42-universal.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraftforge:forge:1.16.5-36.2.42:client",
+              "name": "Minecraft Forge (client jar)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 4214276,
+                "MD5": "e26430416f5d1bd7c205c1b81a0fb8f8",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraftforge/forge/1.16.5-36.2.42/forge-1.16.5-36.2.42-client.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraft:client:1.16.5-20210115.111550:srg",
+              "name": "Minecraft Forge (client srg)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 11352644,
+                "MD5": "5edcf6234690c89677defb65dd4d7991",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraft/client/1.16.5-20210115.111550/client-1.16.5-20210115.111550-srg.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraft:client:1.16.5-20210115.111550:slim",
+              "name": "Minecraft Forge (client slim)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 9118806,
+                "MD5": "df78297c0b6526e16f2bb7a685fd6b96",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraft/client/1.16.5-20210115.111550/client-1.16.5-20210115.111550-slim.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "net.minecraft:client:1.16.5-20210115.111550:extra",
+              "name": "Minecraft Forge (client extra)",
+              "type": "Library",
+              "classpath": false,
+              "artifact": {
+                "size": 8428369,
+                "MD5": "dbed747390f81e10cee40500b726431a",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraft/client/1.16.5-20210115.111550/client-1.16.5-20210115.111550-extra.jar"
+              },
+              "subModules": []
+            },
+            {
+              "id": "org.ow2.asm:asm:9.6",
+              "name": "Minecraft Forge (asm)",
+              "type": "Library",
+              "artifact": {
+                "size": 123598,
+                "MD5": "6f8bccf756f170d4185bb24c8c2d2020",
+                "url": "https://myakho.github.io/server/repo/lib/org/ow2/asm/asm/9.6/asm-9.6.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-commons:9.6",
+              "name": "Minecraft Forge (asm-commons)",
+              "type": "Library",
+              "artifact": {
+                "size": 72194,
+                "MD5": "9e317c75534bd1da8c00a67c618ab288",
+                "url": "https://myakho.github.io/server/repo/lib/org/ow2/asm/asm-commons/9.6/asm-commons-9.6.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-tree:9.6",
+              "name": "Minecraft Forge (asm-tree)",
+              "type": "Library",
+              "artifact": {
+                "size": 51935,
+                "MD5": "6062608f1a98afe1e853d01fa1221a9e",
+                "url": "https://myakho.github.io/server/repo/lib/org/ow2/asm/asm-tree/9.6/asm-tree-9.6.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-util:9.6",
+              "name": "Minecraft Forge (asm-util)",
+              "type": "Library",
+              "artifact": {
+                "size": 91131,
+                "MD5": "bd3bc1c176a787373e9a031073c9574b",
+                "url": "https://myakho.github.io/server/repo/lib/org/ow2/asm/asm-util/9.6/asm-util-9.6.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-analysis:9.6",
+              "name": "Minecraft Forge (asm-analysis)",
+              "type": "Library",
+              "artifact": {
+                "size": 34041,
+                "MD5": "31c84ef7cc893fb278952ae2d6a2674f",
+                "url": "https://myakho.github.io/server/repo/lib/org/ow2/asm/asm-analysis/9.6/asm-analysis-9.6.jar"
+              }
+            },
+            {
+              "id": "cpw.mods:modlauncher:8.1.3",
+              "name": "Minecraft Forge (modlauncher)",
+              "type": "Library",
+              "artifact": {
+                "size": 126747,
+                "MD5": "b6ba74224a6a68e6fb3e9cf3d72b9344",
+                "url": "https://myakho.github.io/server/repo/lib/cpw/mods/modlauncher/8.1.3/modlauncher-8.1.3.jar"
+              }
+            },
+            {
+              "id": "cpw.mods:grossjava9hacks:1.3.3",
+              "name": "Minecraft Forge (grossjava9hacks)",
+              "type": "Library",
+              "artifact": {
+                "size": 2113,
+                "MD5": "d19b487241008d8e6111137a289ea1d7",
+                "url": "https://myakho.github.io/server/repo/lib/cpw/mods/grossjava9hacks/1.3.3/grossjava9hacks-1.3.3.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:accesstransformers:3.0.1",
+              "name": "Minecraft Forge (accesstransformers)",
+              "type": "Library",
+              "artifact": {
+                "size": 76586,
+                "MD5": "ada4c365c3d0de73c05a94010432b547",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraftforge/accesstransformers/3.0.1/accesstransformers-3.0.1.jar"
+              }
+            },
+            {
+              "id": "org.antlr:antlr4-runtime:4.9.1",
+              "name": "Minecraft Forge (antlr4-runtime)",
+              "type": "Library",
+              "artifact": {
+                "size": 337868,
+                "MD5": "0dcc4b860d5d8d2852ab94d58c56ca2d",
+                "url": "https://myakho.github.io/server/repo/lib/org/antlr/antlr4-runtime/4.9.1/antlr4-runtime-4.9.1.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:eventbus:4.0.0",
+              "name": "Minecraft Forge (eventbus)",
+              "type": "Library",
+              "artifact": {
+                "size": 42873,
+                "MD5": "84c4758e6139b70146104be5bb1300b5",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraftforge/eventbus/4.0.0/eventbus-4.0.0.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:forgespi:3.2.0",
+              "name": "Minecraft Forge (forgespi)",
+              "type": "Library",
+              "artifact": {
+                "size": 20172,
+                "MD5": "8f1f6942d17d88d704324e8000666a1a",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraftforge/forgespi/3.2.0/forgespi-3.2.0.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:coremods:4.0.6",
+              "name": "Minecraft Forge (coremods)",
+              "type": "Library",
+              "artifact": {
+                "size": 25453,
+                "MD5": "e56551f2586d3ff08beb24f5ea44a7d3",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraftforge/coremods/4.0.6/coremods-4.0.6.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:unsafe:0.2.0",
+              "name": "Minecraft Forge (unsafe)",
+              "type": "Library",
+              "artifact": {
+                "size": 2834,
+                "MD5": "2d1016ebe4c1a63dd50a59d26bd12db1",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraftforge/unsafe/0.2.0/unsafe-0.2.0.jar"
+              }
+            },
+            {
+              "id": "com.electronwill.night-config:core:3.6.3",
+              "name": "Minecraft Forge (core)",
+              "type": "Library",
+              "artifact": {
+                "size": 199091,
+                "MD5": "093b0ca357d3f8b922170b8d7f43948c",
+                "url": "https://myakho.github.io/server/repo/lib/com/electronwill/night-config/core/3.6.3/core-3.6.3.jar"
+              }
+            },
+            {
+              "id": "com.electronwill.night-config:toml:3.6.3",
+              "name": "Minecraft Forge (toml)",
+              "type": "Library",
+              "artifact": {
+                "size": 31288,
+                "MD5": "615b8e62371c536f876764591990118d",
+                "url": "https://myakho.github.io/server/repo/lib/com/electronwill/night-config/toml/3.6.3/toml-3.6.3.jar"
+              }
+            },
+            {
+              "id": "org.jline:jline:3.12.1",
+              "name": "Minecraft Forge (jline)",
+              "type": "Library",
+              "artifact": {
+                "size": 732926,
+                "MD5": "ffd8c9d6eb8a8456ef505c8ef9fc777d",
+                "url": "https://myakho.github.io/server/repo/lib/org/jline/jline/3.12.1/jline-3.12.1.jar"
+              }
+            },
+            {
+              "id": "org.apache.maven:maven-artifact:3.6.3",
+              "name": "Minecraft Forge (maven-artifact)",
+              "type": "Library",
+              "artifact": {
+                "size": 57824,
+                "MD5": "b83c1943a0783f3f81d4cd4c83c363e1",
+                "url": "https://myakho.github.io/server/repo/lib/org/apache/maven/maven-artifact/3.6.3/maven-artifact-3.6.3.jar"
+              }
+            },
+            {
+              "id": "net.jodah:typetools:0.8.3",
+              "name": "Minecraft Forge (typetools)",
+              "type": "Library",
+              "artifact": {
+                "size": 15425,
+                "MD5": "ee4596e1413cc1a5e080c971d6064753",
+                "url": "https://myakho.github.io/server/repo/lib/net/jodah/typetools/0.8.3/typetools-0.8.3.jar"
+              }
+            },
+            {
+              "id": "org.apache.logging.log4j:log4j-api:2.15.0",
+              "name": "Minecraft Forge (log4j-api)",
+              "type": "Library",
+              "artifact": {
+                "size": 301804,
+                "MD5": "a9ccfa7e3382dd2b9e0647a43d8286d7",
+                "url": "https://myakho.github.io/server/repo/lib/org/apache/logging/log4j/log4j-api/2.15.0/log4j-api-2.15.0.jar"
+              }
+            },
+            {
+              "id": "org.apache.logging.log4j:log4j-core:2.15.0",
+              "name": "Minecraft Forge (log4j-core)",
+              "type": "Library",
+              "artifact": {
+                "size": 1789769,
+                "MD5": "81e0433ae00602c0e4d00424d213b0ab",
+                "url": "https://myakho.github.io/server/repo/lib/org/apache/logging/log4j/log4j-core/2.15.0/log4j-core-2.15.0.jar"
+              }
+            },
+            {
+              "id": "org.apache.logging.log4j:log4j-slf4j18-impl:2.15.0",
+              "name": "Minecraft Forge (log4j-slf4j18-impl)",
+              "type": "Library",
+              "artifact": {
+                "size": 21223,
+                "MD5": "196442f1bdde4dbb0f576eed616e21b0",
+                "url": "https://myakho.github.io/server/repo/lib/org/apache/logging/log4j/log4j-slf4j18-impl/2.15.0/log4j-slf4j18-impl-2.15.0.jar"
+              }
+            },
+            {
+              "id": "net.minecrell:terminalconsoleappender:1.2.0",
+              "name": "Minecraft Forge (terminalconsoleappender)",
+              "type": "Library",
+              "artifact": {
+                "size": 15977,
+                "MD5": "679363fa893293791e55a21f81342f87",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecrell/terminalconsoleappender/1.2.0/terminalconsoleappender-1.2.0.jar"
+              }
+            },
+            {
+              "id": "net.sf.jopt-simple:jopt-simple:5.0.4",
+              "name": "Minecraft Forge (jopt-simple)",
+              "type": "Library",
+              "artifact": {
+                "size": 78146,
+                "MD5": "eb0d9dffe9b0eddead68fe678be76c49",
+                "url": "https://myakho.github.io/server/repo/lib/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar"
+              }
+            },
+            {
+              "id": "org.spongepowered:mixin:0.8.4",
+              "name": "Minecraft Forge (mixin)",
+              "type": "Library",
+              "artifact": {
+                "size": 1069391,
+                "MD5": "25fbb8ff965e88cc2252c99be0cf5cbb",
+                "url": "https://myakho.github.io/server/repo/lib/org/spongepowered/mixin/0.8.4/mixin-0.8.4.jar"
+              }
+            },
+            {
+              "id": "net.minecraftforge:nashorn-core-compat:15.1.1.1",
+              "name": "Minecraft Forge (nashorn-core-compat)",
+              "type": "Library",
+              "artifact": {
+                "size": 2194057,
+                "MD5": "ae37ed8407982eefc9f85fdb1c95a3a0",
+                "url": "https://myakho.github.io/server/repo/lib/net/minecraftforge/nashorn-core-compat/15.1.1.1/nashorn-core-compat-15.1.1.1.jar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "net.optifine:optifine:1.16.5_HD_U_G8@jar",
+          "name": "OptiFine",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 6046996,
+            "url": "https://myakho.github.io/server/servers/asdf-1.16.5/forgemods/required/OptiFine_1.16.5_HD_U_G8.jar",
+            "MD5": "e0717ba6d1674af83036ebc479fc77b4"
+          }
+        },
+        {
+          "id": "GwiDamResourcePack_V1.6.zip",
+          "name": "GwiDamResourcePack_V1.6.zip",
+          "type": "File",
+          "artifact": {
+            "size": 44055818,
+            "url": "https://myakho.github.io/server/servers/asdf-1.16.5/files/resourcepacks/GwiDamResourcePack_V1.6.zip",
+            "MD5": "a95393e99fcb98483e5d7780dcebc14c",
+            "path": "resourcepacks/GwiDamResourcePack_V1.6.zip"
+          }
+        },
+        {
+          "id": "SEUS-Renewed-v1.0.1.zip",
+          "name": "SEUS-Renewed-v1.0.1.zip",
+          "type": "File",
+          "artifact": {
+            "size": 7062638,
+            "url": "https://myakho.github.io/server/servers/asdf-1.16.5/files/shaderpacks/SEUS-Renewed-v1.0.1.zip",
+            "MD5": "8faeb04d9953c9b10b0794acafc4c1aa",
+            "path": "shaderpacks/SEUS-Renewed-v1.0.1.zip"
+          }
+        }
+      ]
+    }
+  ]
+}
