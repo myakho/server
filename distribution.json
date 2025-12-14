@@ -13,7 +13,7 @@
       "description": "녹화",
       "icon": "https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80",
       "version": "1.0.0",
-      "address": "domin.mcv.kr",
+      "address": "domin.mcv.kr:24454",
       "minecraftVersion": "1.21.10",
       "discord": {
         "shortId": "<FILL IN OR REMOVE DISCORD OBJECT>",
